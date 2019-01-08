@@ -1,0 +1,19 @@
+Current Properties
+<p-table [value]="properties$ | async">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>description</th>
+          <th>price</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-property>
+      <tr>
+          <td>{{property.id}}</td>
+          <td>{{property.name}}</td>
+          <td>{{property.description}}</td>
+          <td>{{property.price}}</td>
+      </tr>
+  </ng-template>
+</p-table>
