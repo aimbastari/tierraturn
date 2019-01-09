@@ -1,3 +1,4 @@
+import { PropertyModel } from './../shared/property.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,16 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PropertyComponent implements OnInit {
 
   @Input()
-  id: number;
-
-  @Input()
-  name: string;
-
-  @Input()
-  description: string;
-
-  @Input()
-  price: number;
+  property: PropertyModel;
 
   constructor() { }
 

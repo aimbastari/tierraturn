@@ -12,4 +12,8 @@ export class PropertiesComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSelectedProperty(value){
+    console.log(value);
+  }
+
 }

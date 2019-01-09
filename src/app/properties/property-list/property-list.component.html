@@ -1,5 +1,5 @@
 Current Properties
-<p-table [value]="properties$ | async">
+<p-table [value]="properties$ | async" selectionMode="single" [(selection)]="selectedProperty">
   <ng-template pTemplate="header">
       <tr>
           <th>id</th>
@@ -8,8 +8,8 @@ Current Properties
           <th>price</th>
       </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-property>
-      <tr>
+  <ng-template pTemplate="body" let-rowData let-property>
+      <tr [pSelectableRow]="rowData">
           <td>{{property.id}}</td>
           <td>{{property.name}}</td>
           <td>{{property.description}}</td>
@@ -17,3 +17,4 @@ Current Properties
       </tr>
   </ng-template>
 </p-table>
+{{ this.selectedProperty | json }}

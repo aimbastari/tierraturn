@@ -20,5 +20,5 @@ export class PropertyService {
     return of(properties);
   }
 
-
+ 
 }

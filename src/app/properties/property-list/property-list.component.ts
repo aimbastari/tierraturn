@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { PropertyService } from '../shared/property.service';
 import { Observable } from 'rxjs';
 import { PropertyModel } from '../shared/property.model';
@@ -9,10 +9,13 @@ import { PropertyModel } from '../shared/property.model';
   styleUrls: ['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit {
-
-  constructor(private propertyService: PropertyService) { }
+  
+  //@Output()
+  selectedProperty: PropertyModel;
 
   properties$: Observable<PropertyModel[]>;
+
+  constructor(private propertyService: PropertyService) { }
 
   ngOnInit() {
     this.properties$ = this.propertyService.getProperties();

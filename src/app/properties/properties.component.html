@@ -1,4 +1,5 @@
 <p-panel header="Properties">
   Contains list of properties to invest in.
-  <app-property-list></app-property-list>
+  <app-property-list (selectedProperty)="onSelectedProperty(selectedProperty)"></app-property-list>
+  <app-property [property]="selectedProperty"></app-property>
 </p-panel>
