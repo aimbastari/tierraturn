@@ -1,8 +1,7 @@
 <h1>{{ title }}</h1>
-<nav>
-  <a routerLink="/properties">properties</a>
-</nav>
-<nav>
-  <a routerLink="/investors">investors</a>
-</nav>
+
+<p-tabMenu [model]="items" ></p-tabMenu>
+
 <router-outlet></router-outlet>
+
+

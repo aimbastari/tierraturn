@@ -6,6 +6,10 @@ import {InvestorsComponent} from './investors/investors.component';
 
 
 const routes: Routes = [
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
+  },
   {path: 'properties', component: PropertiesComponent},
   {path: 'investors', component: InvestorsComponent}
 
@@ -16,6 +20,13 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  imports: [RouterModule.forRoot(routes)]
+  imports: [
+    RouterModule.forRoot(
+      routes,   
+      { 
+        enableTracing: true 
+      }
+    )
+  ]
 })
 export class AppRoutingModule { }
